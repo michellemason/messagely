@@ -7,7 +7,7 @@ const ExpressError = require("../expressError");
 /** Message on the site. */
 
 class Message {
-
+ 
   /** register new message -- returns
    *    {id, from_username, to_username, body, sent_at}
    */
@@ -17,7 +17,7 @@ class Message {
         `INSERT INTO messages (
               from_username,
               to_username,
-              body,
+              body, 
               sent_at)
             VALUES ($1, $2, $3, current_timestamp)
             RETURNING id, from_username, to_username, body, sent_at`,
